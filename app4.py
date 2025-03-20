@@ -306,6 +306,7 @@ if prompt := st.chat_input("Ask about FPL data, players, or your team..."):
             
             # Get response from assistant
             with st.spinner("Getting response..."):
+                api_key="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"
                 if api_key:
                     try:
                         full_response = get_assistant_response(
