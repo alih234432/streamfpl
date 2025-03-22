@@ -1,0 +1,20 @@
+fpl_chatbot/
+├── README.md
+├── requirements.txt
+├── .gitignore
+├── app.py               # Main entry point (Streamlit front-end)
+├── config.py            # Global configuration (API keys, settings, etc.)
+├── data/                # Data sources and files
+│   ├── players.csv
+│   ├── fixtures.json
+│   └── ... 
+└── fplcore/             # All Python source files related to the FPL application
+    ├── __init__.py
+    ├── players.py       # Functions/classes related to players
+    ├── user.py          # User management and interactions
+    ├── fixture.py       # Fixture handling and analysis
+    ├── fpl_rules.py     # FPL rules and validations
+    ├── chatbot.py       # Chatbot logic (NLP, conversation flow, etc.)
+    ├── logger.py        # Logging configuration and setup
+    └── helpers.py       # Utility functions and helpers
+    

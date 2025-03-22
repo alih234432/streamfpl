@@ -10,12 +10,15 @@ from config import DATA_FOLDER
 from fplcore.logger import log_info
 
 def ensure_data_folder():
-    """Ensure the data directory exists"""
+    """Ensure the data directory exists and contains required files"""
     if not os.path.exists(DATA_FOLDER):
         os.makedirs(DATA_FOLDER)
         log_info(f"Created data directory: {DATA_FOLDER}")
     
-    # No call to check_required_files() to avoid the error
+    # Check if required files exist and create them if not
+    files_created = check_required_files()
+    if files_created:
+        log_info("Created missing required data files")
 
 def main():
     """Main application entry point with navigation"""
@@ -52,7 +55,7 @@ def main():
 
 # Run the app
 if __name__ == "__main__":
-    # Ensure data directory exists
+    # Ensure data directory exists and contains required files
     ensure_data_folder()
     
     if "authenticated" not in st.session_state:

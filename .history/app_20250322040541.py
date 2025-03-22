@@ -14,8 +14,6 @@ def ensure_data_folder():
     if not os.path.exists(DATA_FOLDER):
         os.makedirs(DATA_FOLDER)
         log_info(f"Created data directory: {DATA_FOLDER}")
-    
-    # No call to check_required_files() to avoid the error
 
 def main():
     """Main application entry point with navigation"""
